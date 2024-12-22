@@ -1,0 +1,88 @@
+{
+  "name": "parse-domain",
+  "version": "8.2.2",
+  "description": "Splits a hostname into subdomains, domain and (effective) top-level domains",
+  "keywords": [
+    "domain",
+    "url",
+    "sub-domain",
+    "tld",
+    "parse",
+    "sanitize",
+    "top-level"
+  ],
+  "type": "module",
+  "main": "./build/main.js",
+  "types": "./build/main.d.ts",
+  "scripts": {
+    "test": "run-p test:*",
+    "test:suite": "vitest run --coverage",
+    "test:lint": "eslint --max-warnings 0 --cache --ext js,ts --ignore-path .gitignore .",
+    "test:format": "prettier --check .",
+    "test:types": "tsc --noEmit",
+    "build": "run-s build:*",
+    "build:cleanup": "rimraf build",
+    "build:tsc": "tsc -p ./tsconfig.build.json",
+    "build:update": "./bin/update.js",
+    "prepare": "run-p prepare:*",
+    "prepare:husky": "husky",
+    "prepare:build": "npm run build",
+    "update:psl-fixture": "npm run node -- ./src/scripts/update-psl-fixture.ts",
+    "update:dependencies": "updtr",
+    "node": "node --no-warnings --loader ts-node/esm/transpile-only",
+    "release": "semantic-release"
+  },
+  "bin": {
+    "parse-domain-update": "./bin/update.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peerigon/parse-domain.git"
+  },
+  "author": "peerigon <developers@peerigon.com>",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "build",
+    "serialized-tries"
+  ],
+  "sideEffects": false,
+  "lint-staged": {
+    "*.{ts,tsx,js,cjs,mjs,jsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    ".github/workflows/*.{yml,yaml}": [
+      "pin-github-action --allow-empty",
+      "prettier --write"
+    ],
+    "*.{json,css,md,yml,yaml}": "prettier --write"
+  },
+  "dependencies": {
+    "is-ip": "^5.0.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^20.14.12",
+    "@vitest/coverage-v8": "^2.0.4",
+    "eslint": "^8.57.0",
+    "eslint-config-peerigon": "^39.1.0",
+    "eslint-plugin-no-null": "^1.0.2",
+    "husky": "^9.1.2",
+    "lint-staged": "^15.2.7",
+    "nock": "^14.0.0-beta.9",
+    "npm-run-all": "^4.1.5",
+    "pin-github-action": "^1.9.1",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "semantic-release": "^24.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "updtr": "^4.1.0",
+    "vitest": "^2.0.4"
+  },
+  "publishConfig": {
+    "provenance": true
+  }
+}
