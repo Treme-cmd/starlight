@@ -26,6 +26,9 @@ importers:
       lucide-react:
         specifier: ^0.454.0
         version: 0.454.0(react@18.3.1)
+      pnpm:
+        specifier: ^9.15.1
+        version: 9.15.1
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -45,9 +48,6 @@ importers:
         specifier: ^0.7.7
         version: 0.7.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
-      '@catppuccin/daisyui':
-        specifier: ^1.1.2
-        version: 1.1.2(daisyui@4.12.14(postcss@8.4.47))
       '@eslint/js':
         specifier: ^9.13.0
         version: 9.13.0
@@ -182,14 +182,6 @@ packages:
   '@babel/types@7.26.0':
     resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
     engines: {node: '>=6.9.0'}
-
-  '@catppuccin/daisyui@1.1.2':
-    resolution: {integrity: sha512-93zeGybjF882zFwxsCCBpaf0Rk8btnvMUQrnwlM9k7t3Ol9JcZraqqxN9yRcAn/jK8jMKGa0pj/xc+CRdPStJg==}
-    peerDependencies:
-      daisyui: ^4.10.2
-
-  '@catppuccin/palette@1.5.0':
-    resolution: {integrity: sha512-SQd/1h2gkK+nA5SWfd7NnUA/RsM8fIMJaqB8HzwATlNSDtPzTI7qmy3ei+jlgThlGILvdDt0C5CJ+3n/G9trKw==}
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -2223,6 +2215,11 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
 
+  pnpm@9.15.1:
+    resolution: {integrity: sha512-GstWXmGT7769p3JwKVBGkVDPErzHZCYudYfnHRncmKQj3/lTblfqRMSb33kP9pToPCe+X6oj1n4MAztYO+S/zw==}
+    engines: {node: '>=18.12'}
+    hasBin: true
+
   possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
     engines: {node: '>= 0.4'}
@@ -3010,13 +3007,6 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
-
-  '@catppuccin/daisyui@1.1.2(daisyui@4.12.14(postcss@8.4.47))':
-    dependencies:
-      '@catppuccin/palette': 1.5.0
-      daisyui: 4.12.14(postcss@8.4.47)
-
-  '@catppuccin/palette@1.5.0': {}
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
@@ -5141,6 +5131,8 @@ snapshots:
   pinkie@2.0.4: {}
 
   pirates@4.0.6: {}
+
+  pnpm@9.15.1: {}
 
   possible-typed-array-names@1.0.0: {}
 
