@@ -4,12 +4,7 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
-    "start": "vite build && node index.js",
-    "altstart": "node index.js",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "node index.js"
   },
   "dependencies": {
     "chemicaljs": "^2.2.0",
