@@ -1,2 +1,2 @@
 [dev]
-  command = "pnpm start"
+  command = "pnpm altstart"
