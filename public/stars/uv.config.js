@@ -2,7 +2,7 @@
 
 self.__uv$config = {
   prefix: "/stars/results/",
-  bare: "/bare/",
+  bare:'https://bare.benrogo.net',
   encodeUrl: Ultraviolet.codec.xor.encode,
   decodeUrl: Ultraviolet.codec.xor.decode,
   handler: "/stars/uv.handler.js",
